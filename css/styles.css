@@ -102,6 +102,7 @@ header {
   display: flex;
   justify-content: flex-end;
   flex: 1 0 1;
+  padding-right: var(--body-padding);
 }
 
 body.no-js .toggle-button {
@@ -110,6 +111,7 @@ body.no-js .toggle-button {
 
 .toggle-button {
   margin-top: auto;
+  margin-left: auto;
   padding: .4em .8em;
   background-color: var(--background-alt);
   border: none;
@@ -160,7 +162,7 @@ main {
 @media screen and (min-width: 800px) {
   .about {
     padding: 1rem 0 0;
-    flex: 1;
+    flex: 4;
   }
 }
 
@@ -192,24 +194,26 @@ main {
 .links {
   display: flex;
   flex-direction: column;
-  flex: 2;
+  flex: 1;
+  max-width: 300px;
 }
 
 .links > a {
-  padding-right: var(--body-padding);
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  flex: 1;;
   border-bottom: 1px solid var(--border-color);
   text-decoration: none;
-  font-size: clamp(1.5rem, 5vw, 10rem);
+  font-size: clamp(1rem, 1.5vw, 1.6rem);
   color: var(--text-color);
 }
 
 .links > a > strong {
-  padding-left: var(--body-padding);
+  padding-left: 1rem;
   padding-right: .5em;
   position: relative;
   display: flex;
@@ -244,7 +248,7 @@ main {
 
 .links > a > span {
   position: relative;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
   transition: transform 150ms ease-in-out;
   transform: translateX(-100%);
   z-index: 0;
